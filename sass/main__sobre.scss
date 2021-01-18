@@ -1,0 +1,170 @@
+//imports bootstrap
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+//@import "bootstrap/reboot";
+@import "bootstrap/type";
+//@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+//@import "bootstrap/tables";
+//@import "bootstrap/forms";
+//@import "bootstrap/buttons";
+//@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+//@import "bootstrap/button-group";
+//@import "bootstrap/input-group";
+//@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+//@import "bootstrap/card";
+//@import "bootstrap/breadcrumb";
+//@import "bootstrap/pagination";
+//@import "bootstrap/badge";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/alert";
+//@import "bootstrap/progress";
+@import "bootstrap/media";
+//@import "bootstrap/list-group";
+//@import "bootstrap/close";
+//@import "bootstrap/toasts";
+//@import "bootstrap/modal";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popover";
+@import "bootstrap/carousel";
+//@import "bootstrap/spinners";
+@import "bootstrap/utilities";
+//@import "bootstrap/print";
+
+//meus imports
+@import "reset";
+@import "variaveis__mixins";
+@import "responsivo";
+@import "menu";
+@import "animation";
+//@import "footer";
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 6000px;
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 20px;
+        height: 45px;
+        background-color: $amareloNew;
+        position: absolute;
+        top: 184px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+.d__flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+// TEXTOS E BACKGROUND =================
+#intro {
+    padding-top: 180px;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding-bottom: 40px;
+
+    .intro__textos {
+        h1 {
+            color: $amareloNew;
+            margin-bottom: 20px;
+            margin-left:10px;
+
+        }
+
+        p {
+            color: $branco-cinza;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            span {
+                color: $amareloNew;
+
+            }
+        }
+    }
+
+    p.intro__adicional {
+        font-size: 12px;
+        width: 100%;
+        margin-top:40px;
+    }
+}
+
+// CARDS ================
+
+.intro__cards {
+    .borda {
+        width: 90px;
+        height: 90px;
+        border-radius: 20%;
+        border: 3px solid $branco-cinza;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+    }
+
+    .intro__wrapper {
+        border-radius: 20px;
+        border: 1px solid #404040;
+        padding: 30px 10px;
+        justify-content: center;
+
+        .intro__card {
+            margin: 10px;
+            width: calc(12.5% - 20px);
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            h3 {
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom:0px;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 5px 0;
+            }
+
+            .border__bottom {
+                border-bottom: 1px solid $branco-cinza;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+
+}
