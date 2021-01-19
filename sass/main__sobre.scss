@@ -78,19 +78,21 @@ html {
 
 
 // TEXTOS E BACKGROUND =================
+
 #intro {
     padding-top: 180px;
     background-image: url(../img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
+    margin-bottom: -20px;
 
     .intro__textos {
         h1 {
             color: $amareloNew;
             margin-bottom: 20px;
-            margin-left:10px;
+            margin-left: 10px;
 
         }
 
@@ -109,7 +111,7 @@ html {
     p.intro__adicional {
         font-size: 12px;
         width: 100%;
-        margin-top:40px;
+        margin-top: 40px;
     }
 }
 
@@ -151,7 +153,7 @@ html {
             h3 {
                 font-weight: bold;
                 font-size: 20px;
-                margin-bottom:0px;
+                margin-bottom: 0px;
             }
 
             p {
@@ -167,4 +169,350 @@ html {
     }
 
 
+}
+
+
+//SEÇÃO 2 =======================
+
+#presentamos {
+    padding: 100px 0;
+    background-image: url(../img/background-white.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include d(m) {
+        padding: 60px 0;
+
+    }
+
+    .container {
+        max-width: 1100px;
+    }
+
+    h1 {
+        color: $branco-cinza-2;
+        font-size: 46px;
+        font-weight: bold;
+        max-width: 700px;
+
+        @include d(m) {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .presentamos__wrapper {
+        align-items: center;
+
+        @include d(m) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    }
+
+    .presentamos__logo2 {
+        width: 250px;
+
+        img {
+            margin-left: auto;
+        }
+
+        @include d(m) {
+
+            img {
+                margin: 30px auto;
+            }
+        }
+    }
+
+    .presentamos__logo1 {
+        max-width: 300px;
+        margin-left: auto;
+
+        @include d(m) {
+            max-width: 150px;
+            margin: 0 auto;
+        }
+    }
+}
+
+#mission {
+    background-color: #202020;
+    padding: 60px 0;
+
+
+    p {
+        color: $branco-cinza;
+        line-height: 160%;
+        font-size: 18px;
+        margin-bottom: 20px;
+
+        span {
+            color: $amareloNew;
+        }
+    }
+
+    .mission__wrapper {
+        justify-content: space-around;
+    }
+
+    .mission__map {
+        position: relative;
+
+
+
+        @include d(m) {
+            width: 300px;
+            margin-top: 30px;
+        }
+
+        //textos do mapa
+        .net {
+            position: absolute;
+            top: 40px;
+            right: 130px;
+            font-size: 14px;
+
+            @include d(m) {
+                position: absolute;
+                top: 15px;
+                right: 50px;
+                font-size: 10px;
+                opacity: .7;
+            }
+        }
+
+        .mind {
+            position: absolute;
+            right: 140px;
+            max-width: 100px;
+            top: 170px;
+            font-size: 14px;
+
+            @include d(m) {
+                opacity: .7;
+                right: 70px;
+                max-width: 50px;
+                top: 82px;
+                font-size: 10px;
+            }
+        }
+
+        .excelence {
+            position: absolute;
+            right: 160px;
+            max-width: 100px;
+            font-size: 14px;
+            top: 260px;
+
+            @include d(m) {
+                position: absolute;
+                right: 25px;
+                max-width: 100px;
+                font-size: 10px;
+                top: 130px;
+                opacity: .7;
+            }
+        }
+    }
+
+}
+
+
+// SECAO PRIORITES =========
+#priorities {
+    padding: 60px 0;
+    background-color: $preto-bg;
+
+    .text1 {
+        margin-bottom: 30px;
+        font-size: 22px;
+
+        @include d(m) {
+            text-align: start;
+        }
+    }
+
+    p {
+        color: #ededed;
+        font-size: 20px;
+        margin-bottom: 15px;
+
+        @include d(m) {
+            text-align: center;
+        }
+
+        span {
+            color: $amareloNew;
+        }
+
+        i {
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 32px;
+            border: 3px solid #F2F2F2;
+            display: inline-block;
+            text-transform: initial;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 15px;
+            font-style: initial;
+        }
+    }
+
+    i {
+        padding: 10px;
+        border-radius: 50%;
+        border: 3px solid #F2F2F2;
+        color: #ededed;
+        display: inline-block;
+        text-transform: initial;
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 15px;
+        font-style: initial;
+        font-family: 'Fraunces', serif;
+        font-weight: 500;
+        font-size: 32px;
+
+        @include d(m) {
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+
+    }
+
+    .priorities__icon {
+        width: 220px;
+        float: right;
+        vertical-align: middle;
+        margin-top: -20px;
+
+        img {
+            margin-left: 4px;
+            width: 45px;
+            height: 45px;
+        }
+
+        @include d(m) {
+            width: 220px;
+            float: none;
+
+            margin-top: 0px;
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+        color: $branco-cinza;
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        span {
+            color: $amareloNew;
+        }
+    }
+
+    .priorities__list {
+        i {
+            width: 50px;
+            height: 50px;
+            font-size: 22px;
+            min-width: 50px;
+            min-height: 50px;
+
+        }
+
+        p {
+            @include d(m) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .lista__wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: 10px;
+
+        @include d(m) {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 0px;
+        }
+    }
+
+
+
+    p {
+        @include d(m) {
+            font-size: 18px;
+        }
+    }
+}
+
+.priorities__icon2 {
+    @include d(m) {
+        img {
+            width: 100px;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+// DRIVER SECTION ===================
+
+#drivers {
+    padding: 60px 0;
+
+    h1 {
+        color: #767171;
+        max-width: 850px;
+        text-align: end;
+        font-weight: bold;
+        margin-bottom: 40px;
+
+        span {
+            color: $amareloNew;
+        }
+    }
+
+    .drivers__wrapper {
+        align-items: center;
+    }
+
+    li {
+        margin-bottom: 30px;
+        display: flex;
+
+        p {
+            color: #767171;
+            font-size: 24px;
+            display: inline;
+            vertical-align: middle;
+        }
+
+        &:before {
+            content: "";
+            background-image: url(../img/sobre/seta.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+            min-height: 40px;
+            display: inline-block;
+            margin-right:10px;
+        }
+    }
 }
