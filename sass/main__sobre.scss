@@ -491,45 +491,45 @@ html {
     span {
         color: $amareloNew;
     }
-}
 
-.drivers__wrapper {
-    align-items: center;
-}
-
-li {
-    margin-bottom: 30px;
-    display: flex;
-
-    p {
-        color: #767171;
-        font-size: 24px;
-        display: inline;
-        vertical-align: middle;
+    .drivers__wrapper {
+        align-items: center;
     }
 
-    &:before {
-        content: "";
-        background-image: url(../img/sobre/seta.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 40px;
-        min-width: 40px;
-        height: 40px;
-        min-height: 40px;
-        display: inline-block;
-        margin-right: 10px;
+    li {
+        margin-bottom: 30px;
+        display: flex;
+
+        p {
+            color: #767171;
+            font-size: 24px;
+            display: inline;
+            vertical-align: middle;
+        }
+
+        &:before {
+            content: "";
+            background-image: url(../img/sobre/seta.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+            min-height: 40px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+
     }
 
-   
-}
-
-.aviao {
-    img {
-        @include d(m) {
-            margin: 0 auto;
-            width: 130px;
-            margin-bottom: 30px;
+    .aviao {
+        img {
+            @include d(m) {
+                margin: 0 auto;
+                width: 130px;
+                margin-bottom: 30px;
+            }
         }
     }
 }
