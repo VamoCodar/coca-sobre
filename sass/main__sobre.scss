@@ -175,10 +175,11 @@ html {
 //SEÇÃO 2 =======================
 
 #presentamos {
-    padding: 100px 0;
+    padding: 40px 0;
     background-image: url(../img/background-white.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
     @include d(m) {
         padding: 60px 0;
@@ -260,11 +261,11 @@ html {
     .mission__map {
         position: relative;
 
-
-
         @include d(m) {
             width: 300px;
             margin-top: 30px;
+            min-width: 300px;
+            overflow: hidden;
         }
 
         //textos do mapa
@@ -319,6 +320,151 @@ html {
 
 }
 
+#mission {
+    .mission__wrapper-2 {
+        justify-content: space-around;
+
+        .mission__2-text {
+            order: 2;
+
+            @include d(m) {
+                order: -1;
+            }
+        }
+
+        margin-top:60px;
+
+        p {
+            color: $branco-cinza;
+            line-height: 160%;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            span {
+                color: $amareloNew;
+            }
+        }
+    }
+
+    .mission__nuvem {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 356px;
+            min-width: 356px;
+
+            @include d(m) {
+                width: 300px;
+                min-width: 300px;
+            }
+        }
+
+        p {
+            position: absolute;
+            font-size: 12px;
+            text-transform: uppercase;
+
+            @include d(m) {
+                font-size: 10px;
+            }
+        }
+
+        .plazos {
+            top: 33px;
+            left: 110px;
+
+            @include d(m) {
+                top: 28px;
+                left: 100px;
+            }
+        }
+
+        .lealtad {
+            top: 26px;
+            left: 190px;
+
+            @include d(m) {
+                top: 22px;
+                left: 155px;
+            }
+        }
+
+        .objetivos {
+            top: 73px;
+            left: 19px;
+
+            @include d(m) {
+                top: 63px;
+            }
+        }
+
+        .recursos {
+            top: 145px;
+            left: 19px;
+
+            @include d(m) {
+                top: 122px;
+            }
+        }
+
+        .sustentabilidad {
+            top: 205px;
+            left: 70px;
+
+            @include d(m) {
+                top: 170px;
+                left: 65px;
+            }
+        }
+
+        .diversidad {
+            top: 196px;
+            right: 90px;
+
+            @include d(m) {
+                top: 122px;
+                right: 35px;
+            }
+        }
+
+        .responsabilidad {
+            top: 146px;
+            right: 10px;
+
+            @include d(m) {
+                top: 166px;
+                right: 40px;
+            }
+        }
+
+        .mercado {
+            top: 70px;
+            right: 35px;
+            @include d(m){
+                top: 60px
+            }
+        }
+
+        .crescimento {
+            font-size: 14px;
+            top: 85px;
+            max-width: 100px;
+            left: 120px;
+            font-weight: bold;
+
+            @include d(m) {
+                top: 72px;
+                font-size: 12px;
+                left: 100px;
+            }
+        }
+    }
+}
+
+
+
+
 
 // SECAO PRIORITES =========
 #priorities {
@@ -337,7 +483,7 @@ html {
     p {
         color: #ededed;
         font-size: 20px;
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
 
         @include d(m) {
             text-align: center;
@@ -364,7 +510,7 @@ html {
     }
 
     i {
-        padding: 10px;
+        padding-top: 6px;
         border-radius: 50%;
         border: 3px solid #F2F2F2;
         color: #ededed;
@@ -384,6 +530,7 @@ html {
         @include d(m) {
             margin-bottom: 10px;
             margin-top: 20px;
+            padding-top: 6px;
         }
 
 
@@ -402,9 +549,10 @@ html {
         }
 
         @include d(m) {
-            width: 220px;
+            //width: 220px;
             float: none;
-
+            display: flex;
+            justify-content: center;
             margin-top: 0px;
         }
     }
@@ -429,12 +577,27 @@ html {
             min-width: 50px;
             min-height: 50px;
 
+            @include d(m) {
+                width: 30px;
+                height: 30px;
+                font-size: 22px;
+                min-width: 35px;
+                min-height: 35px;
+                padding-top: 1px;
+                // padding-left: 9px;
+                margin-bottom: 2px
+            }
+
         }
 
         p {
             @include d(m) {
                 font-size: 18px;
             }
+        }
+
+        @include d(m) {
+            margin: 0 auto;
         }
     }
 
@@ -448,6 +611,7 @@ html {
             flex-wrap: wrap;
             justify-content: center;
             margin-bottom: 0px;
+            flex-direction: column;
         }
     }
 
@@ -456,6 +620,8 @@ html {
     p {
         @include d(m) {
             font-size: 18px;
+            max-width: 500px;
+            margin-bottom: 0px
         }
     }
 }
@@ -484,7 +650,7 @@ html {
 
         @include d(m) {
             text-align: start;
-            font-size: 34px;
+            font-size: 28px;
         }
     }
 
@@ -505,6 +671,11 @@ html {
             font-size: 24px;
             display: inline;
             vertical-align: middle;
+
+            @include d(m) {
+                font-size: 18px;
+
+            }
         }
 
         &:before {
@@ -532,4 +703,191 @@ html {
             }
         }
     }
+}
+
+
+//secao apuestas ===============
+
+#apuestas {
+    background-color: #202020;
+    padding: 60px 0;
+    color: $branco-cinza;
+
+    h1 {
+        font-size: 26px;
+        color: $branco-cinza;
+
+        span {
+            color: $amareloNew;
+        }
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 30px;
+        color: #f2f2f2;
+        margin-left: 20px;
+        margin-bottom: 5px;
+
+    }
+
+    .apuestas__wrapper {
+        align-items: center;
+    }
+
+    .cards {
+        background-color: #262626;
+        padding: 10px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        border: 1px solid #595959;
+
+        ul {
+            min-width: 165px;
+            margin-bottom: 25px;
+
+            li {
+                p {
+                    width: 120px;
+                    text-align: center;
+                    margin: 5px auto;
+                }
+            }
+
+            span {
+                font-size: 25px;
+                font-family: 'Fraunces', serif;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                // color:$amareloNew;
+
+                &:after {
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    display: inline-block;
+                    background: $amareloNew;
+                    margin-left: 3px;
+                    border-radius: 50%;
+                }
+
+
+            }
+
+            img {
+                width: 80px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .apuestas__seta {
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .col-md-10 {
+        @include d(m) {
+            margin: 0 auto;
+            padding: 0
+        }
+    }
+
+    .coke {
+        background: #ff0000;
+        padding: 5px 0;
+        text-align: center;
+        align-self: flex-start;
+        border-radius: 6px;
+        margin-right: auto;
+
+    }
+
+    .flavors {
+        background: #ffa200;
+        padding: 5px 0;
+        text-align: center;
+        border-radius: 6px;
+        margin-top: 5px;
+    }
+}
+
+//card 2 
+#apuestas {
+    .apuestas__quebra {
+        margin-top: 30px;
+        font-size: 22px;
+        color: $branco-cinza;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-bottom: 5px;
+
+    }
+
+    .card__2 {
+        ul {
+            li {
+
+                .img-9,
+                .img-10 {
+                    margin-top: 25px !important;
+                }
+            }
+        }
+    }
+
+    .first {
+        text-align: center;
+    }
+
+    .hidratation,
+    .nutrition,
+    .emerging {
+        padding: 5px 0;
+        text-align: center;
+        border-radius: 6px;
+        margin-top: 5px;
+    }
+
+    .hidratation {
+        background: #69c9ce;
+    }
+
+    .nutrition {
+        background: #92d050;
+    }
+
+    .emerging {
+        background: #fff2cc;
+        color: $preto-bg;
+    }
+
+    .card-2__wrapper {
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    h3 {
+        font-weight: bold;
+        text-align: center;
+        font-weight: 34px;
+
+        @include d(m) {
+            font-size: 22px;
+            text-align: start;
+
+        }
+
+        span {
+            color: $amareloNew;
+            line-height: 140%;
+        }
+    }
+
 }
