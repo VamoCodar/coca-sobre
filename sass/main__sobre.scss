@@ -48,6 +48,8 @@
 
 
 
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     height: 6000px;
@@ -441,7 +443,8 @@ html {
         .mercado {
             top: 70px;
             right: 35px;
-            @include d(m){
+
+            @include d(m) {
                 top: 60px
             }
         }
@@ -458,6 +461,49 @@ html {
                 font-size: 12px;
                 left: 100px;
             }
+        }
+    }
+}
+
+//modificaço~es mobile 
+#apuestas {
+    @include d(m) {
+        .cards {
+            max-width: 600px;
+        }
+
+        .card__1,
+        .card__2 {
+            ul {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-around;
+
+                li:first-child {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                img {
+                    width: 70px !important;
+                    margin: 0 auto;
+                    height: 70px !important;
+                    margin-top: 0px;
+                }
+            }
+
+        }
+
+        .coke,
+        .flavors,
+        .first,
+        .second {
+            display: none;
         }
     }
 }
@@ -836,7 +882,7 @@ html {
 
                 .img-9,
                 .img-10 {
-                    margin-top: 25px !important;
+                    margin-top: 25px;
                 }
             }
         }
@@ -890,4 +936,227 @@ html {
         }
     }
 
+    .cards {
+        padding: 30px 10px !important;
+        margin: 0 auto;
+    }
+
+    .img-9,
+    .img-10 {
+        margin-top: 0px !important;
+    }
+
+}
+
+
+//CARDS ULTIMA SEÇÃO =========================
+
+#cards__copa {
+    padding: 40px 0;
+    background: $preto-bg;
+
+    ul.card__copa {
+        background-color: #202020;
+        height: 530px;
+        text-align: center;
+        padding: 45px 10px;
+        color: $branco-cinza;
+        position: relative;
+        border: 4px solid $branco-cinza;
+        overflow: hidden;
+        min-width: 290px;
+        max-width: 320px;
+
+        @include d(ss) {
+            min-width: 270px;
+            max-width: 270px;
+
+
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        i {
+            font-size: 52px;
+            display: inline-block;
+            text-transform: initial;
+            width: 60px;
+            height: 60px;
+            font-style: initial;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-family: 'Fraunces', serif;
+            color: #c6c6c6;
+
+        }
+
+        span {
+            img {
+                position: absolute;
+                top: 3px;
+                left: 2px;
+                width: 30px;
+            }
+        }
+
+        &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 45px solid transparent;
+            border-right: 45px solid transparent;
+            border-bottom: 45px solid $branco-cinza;
+            position: absolute;
+            left: -29px;
+            top: -8px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .card__1-img {
+        img {
+            height: 220px;
+            margin: 0 auto;
+        }
+    }
+}
+
+#cards__copa {
+    .card__copa-2 {
+        ol {
+            font-size: 12px;
+
+            li {
+                border-bottom: 1px solid $branco-cinza;
+                padding: 5px;
+                margin: 0 20px;
+
+                p {
+                    display: inline-block;
+                }
+            }
+
+        }
+    }
+
+}
+
+.img__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+    float: right;
+
+    img {
+        width: 35px;
+        margin: 0 auto;
+    }
+
+    p {
+        text-transform: uppercase;
+        color: $dourado;
+        opacity: .7;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.linha {
+    width: 100%;
+    height: 1px;
+    background-color: $branco-cinza;
+    opacity: .6;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+#cards__copa {
+    .img__metade {
+        width: 40%;
+        float: left;
+
+        img {
+            width: 100px;
+            margin: 0 auto;
+        }
+
+    }
+
+    .card__copa-3 {
+        .img__text-1 {
+            float: none;
+            margin-top: 35px;
+            width: initial;
+
+            img {
+                width: 50px;
+            }
+        }
+
+        .img__text-2 {
+            padding-top: 10px;
+        }
+
+        .img__text-4 {
+            img {
+                width: 90px;
+            }
+        }
+    }
+}
+
+.card__copa-4 {
+    .img__text {
+        img {
+            width: 55px;
+        }
+    }
+
+    .img__metade {
+        width: 50% !important;
+        float: left;
+    }
+}
+
+
+.prox,
+.ant {
+    display: none;
+}
+
+@media (max-width:1210px) {
+    .setas {
+        justify-content: space-between;
+        padding: 30px;
+        margin: 0 auto;
+        margin-left: -10px;
+        overflow: hidden;
+    }
+
+    .prox,
+    .ant {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .card__copa+.card__copa {
+        margin-left: 15px;
+    }
 }
